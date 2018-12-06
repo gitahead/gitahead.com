@@ -1,32 +1,31 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: 'en-US' }}">
 
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,maximum-scale=2">
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-
-{% seo %}
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/gitahead.css" />
+    {% seo %}
   </head>
 
   <body>
-
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://scitools.com/gitahead/thanks/">Download</a>
-
+      <header class="inner">
+        <a href="/"><img src="/images/gitahead.png" /></a>
+        <div id="logo_text">
           <h1 id="project_title">GitAhead</h1>
-          <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
-
-          {% if site.show_downloads %}
-            <section id="downloads">
-              <a class="zip_download_link" href="{{ site.github.zip_url }}">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="{{ site.github.tar_url }}">Download this project as a tar.gz file</a>
-            </section>
-          {% endif %}
-        </header>
+          <h2 id="project_tagline">{{ site.description }}</h2>
+        </div>
+        <div id="button">
+          <a id="download" href="https://scitools.com/gitahead/thanks/">Download</a>
+          <div id="links">
+            <a href="https://github.com/gitahead/gitahead/releases">all downloads</a> |
+            <a href="https://github.com/gitahead/gitahead">source</a>
+          </div>
+        </div>
+      </header>
     </div>
 
     <!-- MAIN CONTENT -->
@@ -40,7 +39,7 @@
     <div id="footer_wrap" class="outer">
       <footer class="inner">
         {% if site.github.is_project_page %}
-        <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">Scientific Toolworks, Inc.</a></p>
+          <p class="copyright">{{ site.title }} maintained by <a href="{{ site.github.owner_url }}">Scientific Toolworks, Inc.</a></p>
         {% endif %}
       </footer>
     </div>
@@ -55,5 +54,7 @@
         ga('send', 'pageview');
       </script>
     {% endif %}
+
+    <script src="/js/retina.min.js?body=1" type="text/javascript"></script>
   </body>
 </html>

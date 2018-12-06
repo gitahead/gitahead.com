@@ -1,5 +1,3 @@
-![GitAhead Logo](assets/images/gitahead.png)
-
 ## What is GitAhead
 GitAhead is an open source project to improve navigating your git history. 
 Gain valuable insight, improve debugging, and understand your code better than ever before. 
