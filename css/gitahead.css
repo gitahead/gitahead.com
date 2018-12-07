@@ -90,11 +90,17 @@ Full-Width Styles
 
 #logo_text { padding: 10px 20px 10px 20px; }
 
-#button { padding: 0px 10px 0px 0px; flex-grow: 1; align-self: center; text-align: right; }
+#spacer { flex-grow: 1; }
 
-#download { padding: 10px; color: #ffffff; background: #0090ff; font-size: 28px; font-weight: 700; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); border-radius: 2px; }
+#download { padding: 0px 10px 0px 0px; align-self: center; text-align: center; }
 
-#links { margin: 10px 0px 0px 0px; }
+#download_button { padding: 8px 16px 8px 16px; border: none; color: #ffffff; background: #0090ff; font-size: 13px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); border-radius: 4px; }
+
+#download_button:hover { background: #0080ff; }
+
+#download_label { font-size: 28px; font-weight: 700; }
+
+#links { margin: 8px 0px 0px 0px; }
 
 #header_wrap { background: #212121; background: -moz-linear-gradient(top, #373737, #212121); background: -webkit-linear-gradient(top, #373737, #212121); background: -ms-linear-gradient(top, #373737, #212121); background: -o-linear-gradient(top, #373737, #212121); background: linear-gradient(to top, #373737, #212121); }
 
