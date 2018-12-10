@@ -88,9 +88,9 @@ Full-Width Styles
 
 .inner { position: relative; max-width: 1000px; padding: 20px 10px; margin: 0 auto; }
 
-#logo_text { padding: 10px 20px 10px 20px; }
+.spacer { flex-grow: 1; }
 
-#spacer { flex-grow: 1; }
+#logo_text { padding: 10px 20px 10px 20px; }
 
 #download { padding: 0px 10px 0px 0px; align-self: center; text-align: center; }
 
@@ -116,6 +116,12 @@ Full-Width Styles
 
 #footer_wrap { background: #212121; }
 
+#copyright { display: flex; }
+
+#copyright img { margin: 0px 12px 0px 0px; }
+
+#copyright p { margin: auto; }
+
 #main { display: flex; }
 
 #main p { padding: 0px 30px 0px 0px;  }
@@ -126,6 +132,7 @@ Small Device Styles
 @media screen and (max-width: 992px) { img { max-width: 100%; } }
 @media screen and (max-width: 480px) { body { font-size: 14px; }
   #download { display: none; }
+  #screenshot { display: none; }
   .inner { min-width: 320px; max-width: 480px; }
   #project_title { font-size: 32px; }
   h1 { font-size: 28px; }
@@ -137,6 +144,7 @@ Small Device Styles
   code, pre { font-size: 11px; } }
 @media screen and (max-width: 320px) { body { font-size: 14px; }
   #download { display: none; }
+  #screenshot { display: none; }
   .inner { min-width: 240px; max-width: 320px; }
   #project_title { font-size: 28px; }
   h1 { font-size: 24px; }

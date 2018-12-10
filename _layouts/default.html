@@ -19,7 +19,7 @@
           <h1 id="project_title">GitAhead</h1>
           <h2 id="project_tagline">{{ site.description }}</h2>
         </div>
-        <div id="spacer"></div>
+        <div class="spacer"></div>
         <div id="download">
           <button id="download_button" onclick="location.href='https://github.com/gitahead/gitahead/releases'">
             <div id="download_label">Download</div>
@@ -43,9 +43,11 @@
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        {% if site.github.is_project_page %}
-          <p class="copyright">Copyright © {{ site.time | date: "%Y" }} <a href="{{ site.github.owner_url }}">Scientific Toolworks, Inc.</a></p>
-        {% endif %}
+        <div id="copyright">
+          <img src="{{ '/images/scitools.png' | relative_url }}">
+          <p>Copyright © {{ site.time | date: "%Y" }} <a href="https://scitools.com">Scientific Toolworks, Inc.</a></p>
+        <div class="spacer"></div>
+        </div>
       </footer>
     </div>
 
@@ -69,8 +71,7 @@
         name = "macOS 10.12+";
       }
 
-      var div = document.getElementById("download_platform");
-      div.innerHTML = name;
+      document.getElementById("download_platform").innerHTML = name;
     </script>
   </body>
 </html>
