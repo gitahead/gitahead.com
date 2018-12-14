@@ -7,6 +7,33 @@
     <meta name="viewport" content="width=device-width,maximum-scale=2">
     <link rel="stylesheet" type="text/css" media="screen" href= "{{ '/css/gitahead.css' | relative_url }}" />
     <script src="{{ '/js/retina.min.js' | relative_url }}" type="text/javascript"></script>
+    <script>
+      function download_link() {
+        var platform = "linux";
+        var version = navigator.appVersion;
+        if (version.indexOf("Win") != -1) {
+          platform = "win";
+        } else if (version.indexOf("Mac") != -1) {
+          platform = "mac";
+        }
+
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET", "https://api.github.com/repos/gitahead/gitahead/releases/latest", false);
+        xmlhttp.send();
+
+        var assets = JSON.parse(xmlhttp.responseText).assets;
+        for (var i in assets) {
+          var asset = assets[i];
+          if ((platform == "mac" && asset.name.endsWith("dmg")) ||
+              (platform == "linux" && asset.name.endsWith("sh")) ||
+              (platform == "win" && asset.name.includes("win64"))) {
+            return asset.browser_download_url;
+          }
+        }
+
+        return "https://github.com/gitahead/gitahead/releases/latest";
+      }
+    </script>
     {% seo %}
   </head>
 
@@ -21,7 +48,7 @@
         </div>
         <div class="spacer"></div>
         <div id="download">
-          <button id="download_button" onclick="location.href='https://github.com/gitahead/gitahead/releases'">
+          <button id="download_button" onclick="location.href=download_link()">
             <div id="download_label">Download</div>
             <div id="download_platform">Unknown</div>
           </button>
