@@ -8,6 +8,10 @@
     <link rel="stylesheet" type="text/css" media="screen" href= "{{ '/css/gitahead.css' | relative_url }}" />
     <script src="{{ '/js/retina.min.js' | relative_url }}" type="text/javascript"></script>
     <script>
+      if (window.location.hash == 'tutorials')
+        window.location.replace('https://www.youtube.com/playlist?list=PLkhgTa3ULplz_DgalwtORMviEJeHy07EB')
+    </script>
+    <script>
       function download_link() {
         var platform = "linux";
         var version = navigator.appVersion;
