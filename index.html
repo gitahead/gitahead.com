@@ -3,42 +3,87 @@ layout: default
 ---
 
 <div id="main">
-  <div>
-    <p>
-      <strong>GitAhead</strong> is a graphical Git client for Windows, Linux
-      and macOS. It features a fast native interface designed to help you
-      understand and manage your source code history.
-    </p>
-    <p>
-      GitAhead was designed by <a href="https://scitools.com">SciTools&trade;</a>,
-      the makers of <a href="https://scitools.com/features/">Understand&trade;</a>.
-      It has all of the features you expect from a commercial quality client,
-      now completely free and open source.
-    </p>
-    <p>
-      Git provides a wealth of historical information that, too often, goes
-      unexploited because it's cumbersome to explore with other tools. We
-      believe that when you understand your history you'll make better
-      choices today!
-    </p>
-  </div>
-  <img id="screenshot" src="{{ '/images/dark.png' | relative_url }}" />
+  <h1 class="hero_heading">
+    Understand your <br /> <span class="color-39b0bd">Git History</span>
+  </h1>
+  <img
+    src="{{ '/images/mac-dark.png' | relative_url }}"
+    alt="GitAhead Mac dark theme screenshot"
+    class="screenshots fade"
+  />
+  <img
+    src="{{ '/images/mac-native.png' | relative_url }}"
+    alt="GitAhead Mac dark light screenshot"
+    class="screenshots fade"
+  />
+  <img
+    src="{{ '/images/windows-dark.png' | relative_url }}"
+    alt="GitAhead Windows dark theme screenshot"
+    class="screenshots fade"
+  />
+  <img
+    src="{{ '/images/windows-native.png' | relative_url }}"
+    alt="GitAhead Windows light theme screenshot"
+    class="screenshots fade"
+  />
 </div>
 
-<h5>How to Get Help</h5>
+<section class="content_section">
+  <p>
+    <strong>GitAhead</strong> <span id="os_icon"></span> is a graphical Git
+    client for Windows, Linux and macOS. It features a fast native interface
+    designed to help you understand and manage your source code history.
+  </p>
+  <p>
+    GitAhead was designed by <a href="https://scitools.com">SciTools&trade;</a>,
+    the makers of
+    <a href="https://scitools.com/features/">Understand&trade;</a>. It has all
+    of the features you expect from a commercial quality client, now completely
+    free and open source.
+  </p>
+  <p>
+    Git provides a wealth of historical information that, too often, goes
+    unexploited because it's cumbersome to explore with other tools. We believe
+    that when you understand your history you'll make better choices today!
+  </p>
+  <h3>How to Get Help</h5>
 <p>
   Ask questions about using GitAhead on
-  <a href="http://stackoverflow.com/questions/tagged/gitahead">Stack
-  Overflow</a> by including the 'gitahead' tag. Report bugs by opening an
-  issue in the <a href="https://github.com/gitahead/gitahead/issues">issue
-  tracker</a>. If you still need help, email us at
+  <a href="http://stackoverflow.com/questions/tagged/gitahead"
+    >Stack Overflow</a
+  >
+  by including the 'gitahead' tag. Report bugs by opening an issue in the
+  <a href="https://github.com/gitahead/gitahead/issues">issue tracker</a>. If
+  you still need help, email us at
   <a href="mailto:support@gitahead.com">support@gitahead.com</a>.
 </p>
 
-<h5>How to Contribute</h5>
+<h3>How to Contribute</h3>
 <p>
   We welcome contributions of all kinds, including bug fixes, new features,
   documentation and translations. See the
-  <a href="https://github.com/gitahead/gitahead/blob/master/README.md">README
-  </a> for more information.
+  <a href="https://github.com/gitahead/gitahead/blob/master/README.md"
+    >README
+  </a>
+  for more information.
 </p>
+</section>
+
+<script>
+  var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("screenshots");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 5000); // Change image every 2 seconds
+  }
+</script>
